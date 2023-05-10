@@ -53,7 +53,7 @@ const PageNewTask = ({ params }) => {
 				)}
 			</div>
 			<div>
-				<label htmlFor="description_task">Task Title:</label>
+				<label htmlFor="description_task">Task Description:</label>
 				<textarea
 					className="w-full p-2 mt-2 rounded-sm"
 					rows="10"
