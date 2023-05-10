@@ -1,9 +1,3 @@
-import React from "react";
+import FormEditPage from "../../new/page";
 
-const PageEditTask = ({ params }) => {
-	const { id } = params;
-
-	return <div>PageEditTask{id}</div>;
-};
-
-export default PageEditTask;
+export default FormEditPage;

@@ -1,7 +1,10 @@
+import "./globals.css";
 import { Inter } from "next/font/google";
 import { TaskProvider } from "@/context/TaskContext";
+import { Toaster } from "react-hot-toast";
 
-import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,8 +16,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
-				<TaskProvider>{children}</TaskProvider>
+			<body className={`${inter.className} bg-[#f3f2ef] min-h-screen relative`}>
+				<header className="bg-white">
+					<Navbar />
+				</header>
+				<main className="sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg mx-auto">
+					<TaskProvider>
+						{children}
+						<Toaster />
+					</TaskProvider>
+				</main>
+				<footer className="bg-white absolute bottom-0 left-0 w-full">
+					<Footer />
+				</footer>
 			</body>
 		</html>
 	);
